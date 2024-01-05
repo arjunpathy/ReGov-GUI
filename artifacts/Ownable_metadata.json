@@ -1,0 +1,79 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Initializes the contract setting the deployer as the initial owner."
+				},
+				"transferOwnership(address)": {
+					"notice": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\Libraries\\Ownable.sol": "Ownable"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\Libraries\\Ownable.sol": {
+			"keccak256": "0xde4db49c60579358787fd91d3b69207463e96563b78786c5a8420bcaea1373c3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e741e971413d1200c3a4451d7023fdaa4716146c6e56ec84fd214fc931479e0d",
+				"dweb:/ipfs/QmcN5PZ8mQgLMshsEzmhokoZ2k3E52CztkqYgHzw1dRk8u"
+			]
+		}
+	},
+	"version": 1
+}

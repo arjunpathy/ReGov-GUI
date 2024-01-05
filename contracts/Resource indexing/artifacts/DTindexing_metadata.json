@@ -1,0 +1,307 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "oracleAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "oracleAddress",
+						"type": "address"
+					}
+				],
+				"name": "Address",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "idPod",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "obligationAddress",
+						"type": "address"
+					}
+				],
+				"name": "NewPod",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "NewResource",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "deactivateResource",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "pod_id",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idSubscription",
+						"type": "uint256"
+					}
+				],
+				"name": "getPodResources",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "id",
+								"type": "int256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "url",
+								"type": "bytes"
+							},
+							{
+								"internalType": "int256",
+								"name": "podId",
+								"type": "int256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTindexing.Resource[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "getResource",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "id",
+								"type": "int256"
+							},
+							{
+								"internalType": "address",
+								"name": "owner",
+								"type": "address"
+							},
+							{
+								"internalType": "bytes",
+								"name": "url",
+								"type": "bytes"
+							},
+							{
+								"internalType": "int256",
+								"name": "podId",
+								"type": "int256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTindexing.Resource",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "monitoringOracle",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "newReference",
+						"type": "bytes"
+					},
+					{
+						"internalType": "enum DTindexing.PodType",
+						"name": "podType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "podAddress",
+						"type": "address"
+					}
+				],
+				"name": "registerPod",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "podId",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "newReference",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "idSubscription",
+						"type": "uint256"
+					}
+				],
+				"name": "registerResource",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Resource indexing/DTindexing.sol": "DTindexing"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Libraries/Ownable.sol": {
+			"keccak256": "0xde4db49c60579358787fd91d3b69207463e96563b78786c5a8420bcaea1373c3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e741e971413d1200c3a4451d7023fdaa4716146c6e56ec84fd214fc931479e0d",
+				"dweb:/ipfs/QmcN5PZ8mQgLMshsEzmhokoZ2k3E52CztkqYgHzw1dRk8u"
+			]
+		},
+		"contracts/Policy Governance/DTmonitoringOracle.sol": {
+			"keccak256": "0x0b70296908fa02ade4856babbb4773d80ece9d8d8a3d46031155150d788eb5ec",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://36ac7b9a0a87c9ed15efa824c0b2820f0b69851d0ccac0988b9d7bf3d3b55843",
+				"dweb:/ipfs/QmPzgnwqhBsa4q5oGL9ChX82fdXvNVbEtiCKnxziRFk3H1"
+			]
+		},
+		"contracts/Policy Governance/DTobligations.sol": {
+			"keccak256": "0xc3c424058c4fb531f2238542f67f0be826c564a721022af4208b11560db3af5c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7605aee1a91fe5202c210950559d4ce19baaac30d32bb701b042b540bbe11786",
+				"dweb:/ipfs/QmbfLNPjxTkh7Hc1v7mHG2rA3nCPDEjFJHtEcvE94fpsGH"
+			]
+		},
+		"contracts/Resource indexing/DTindexing.sol": {
+			"keccak256": "0x4f66b658f1bc2cddf9319acd6f3a2650122243b3dd4a90bbc0a8ae955a0233f9",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://2119b4f039cfc7d6f536b398ce1fd67395f5f3f84b0c8cb81d1ae41340cc7d0b",
+				"dweb:/ipfs/QmaSfBkBe1b8UzpoyoWhkQiMv92pP8meCEKqfb7zzHALfa"
+			]
+		}
+	},
+	"version": 1
+}

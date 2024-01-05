@@ -1,0 +1,142 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSenderAndValue",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSuccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSuccess2",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"beforeAll()": {
+					"notice": "'beforeAll' runs before all other tests More special functions are: 'beforeEach', 'beforeAll', 'afterEach' & 'afterAll'"
+				},
+				"checkSenderAndValue()": {
+					"notice": "Custom Transaction Context: https://remix-ide.readthedocs.io/en/latest/unittesting.html#customization #sender: account-1 #value: 100"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/tests/DTindexing_test.sol": "testSuite"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/Libraries/Ownable.sol": {
+			"keccak256": "0xde4db49c60579358787fd91d3b69207463e96563b78786c5a8420bcaea1373c3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e741e971413d1200c3a4451d7023fdaa4716146c6e56ec84fd214fc931479e0d",
+				"dweb:/ipfs/QmcN5PZ8mQgLMshsEzmhokoZ2k3E52CztkqYgHzw1dRk8u"
+			]
+		},
+		"localhost/contracts/Policy Governance/DTmonitoringOracle.sol": {
+			"keccak256": "0x06e9b039c38b17a9f4e00821f308590eea3e63e49e4d75a722bb5537c39b0484",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6e8600d592fdfe7b794163ca1b2d79fcd15f3cfb6065f1d024ac0745110773e3",
+				"dweb:/ipfs/QmeZ1VsHaDFyDYpRrJ9PwXFxmVeY7u8Q8PKDZsxhVEvmsz"
+			]
+		},
+		"localhost/contracts/Policy Governance/DTobligations.sol": {
+			"keccak256": "0x13301c5d9714216e3ceb63b16a24c5a1777d2548430845d7bf08327bda4c801b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://8b82d5d24480b2580c2cbd9c38d48c82025cd6d566f573f061f91b32f8767260",
+				"dweb:/ipfs/QmYoybiFuX7YGFUrTRLmiiYoQdzhRbmPcCqtsZV8YBPXd4"
+			]
+		},
+		"localhost/contracts/Resource indexing/DTindexing.sol": {
+			"keccak256": "0x97a35d17ba1e90c42af2961c3dfbc8d8e9d172829c680c4eead6c59981a2d0c6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a9c6657f5d28ed36d987b86bf13203b0cdebe358c22ec758acca2704fb764843",
+				"dweb:/ipfs/QmVEGGfKzWBcjEn4GbFUUBatsg9PasMCTpexn3TSuMA7Kg"
+			]
+		},
+		"localhost/tests/DTindexing_test.sol": {
+			"keccak256": "0x4dabc7694aa7e1b483627ea24f189d8f8b67519b90414651634acbb3ac9c5e8c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://f649edcf436cf7dce024367e6d5d9a9432687319e8c585db38d18b7cb8132520",
+				"dweb:/ipfs/QmSHGHPS7gAHCPuyie3Dsja9ba8o9E282ZRoqamihvWEUe"
+			]
+		},
+		"remix_accounts.sol": {
+			"keccak256": "0xab088ffd1cd1033f54c2486f151b5d02281a3b76724c8e6f48479c25a4f7809e",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://5ddaf9976b1838f7028cbedfaf7f6e1cf8c898e100221176ff1406ee8b599f23",
+				"dweb:/ipfs/QmX2FYLXYyo5Cn55ZX2CfngpscSh4mQhcMVzQdQsh2vqcG"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		}
+	},
+	"version": 1
+}

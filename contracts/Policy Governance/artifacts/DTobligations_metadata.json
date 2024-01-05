@@ -1,0 +1,959 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "dtInd",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "podAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "oracleAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "idMonitoring",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "consumer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "response",
+						"type": "bytes"
+					}
+				],
+				"name": "NewMonitoringResponse",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "consumer",
+						"type": "address"
+					},
+					{
+						"internalType": "int256",
+						"name": "idMonitoring",
+						"type": "int256"
+					},
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "response",
+						"type": "bytes"
+					}
+				],
+				"name": "_callback",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum DTobligations.DomainType",
+						"name": "domain",
+						"type": "uint8"
+					}
+				],
+				"name": "adDefaultDomainObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "accessCounter",
+						"type": "uint256"
+					}
+				],
+				"name": "addAccessCounterObligation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "country",
+						"type": "uint256"
+					}
+				],
+				"name": "addCountryObligation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "accessCounter",
+						"type": "uint256"
+					}
+				],
+				"name": "addDefaultAccessCounterObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "country",
+						"type": "uint256"
+					}
+				],
+				"name": "addDefaultCountryObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "temporalObligation",
+						"type": "uint256"
+					}
+				],
+				"name": "addDefaultTemporalObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					},
+					{
+						"internalType": "enum DTobligations.DomainType",
+						"name": "domain",
+						"type": "uint8"
+					}
+				],
+				"name": "addDomainObligation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addTemporalObligation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getDefaultObligationRules",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "getObligationRules",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "int256",
+								"name": "idResource",
+								"type": "int256"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "accessCounter",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.AccessCounterObligation",
+								"name": "acObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "countryCode",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.CountryObligation",
+								"name": "countryObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "usageDuration",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.TemporalObligation",
+								"name": "temporalObligation",
+								"type": "tuple"
+							},
+							{
+								"components": [
+									{
+										"internalType": "enum DTobligations.DomainType",
+										"name": "domain",
+										"type": "uint8"
+									},
+									{
+										"internalType": "bool",
+										"name": "exists",
+										"type": "bool"
+									}
+								],
+								"internalType": "struct DTobligations.DomainObligation",
+								"name": "domainObligation",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct DTobligations.ObligationRules",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "monitor_compliance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "monitoringOracle",
+				"outputs": [
+					{
+						"internalType": "contract DTmonitoringOracle",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "removeAccessCounterObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "removeCountryObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "removeDefaultAccessCounterObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "removeDefaultCountryObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "removeDefaultDomainObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "removeDefaultTemporalObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "removeDomainObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "removeTemporalObligation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "idResource",
+						"type": "int256"
+					}
+				],
+				"name": "withSpecificRules",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"transferOwnership(address)": {
+					"notice": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Policy Governance/DTobligations.sol": "DTobligations"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Libraries/Ownable.sol": {
+			"keccak256": "0xde4db49c60579358787fd91d3b69207463e96563b78786c5a8420bcaea1373c3",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://e741e971413d1200c3a4451d7023fdaa4716146c6e56ec84fd214fc931479e0d",
+				"dweb:/ipfs/QmcN5PZ8mQgLMshsEzmhokoZ2k3E52CztkqYgHzw1dRk8u"
+			]
+		},
+		"contracts/Policy Governance/DTmonitoringOracle.sol": {
+			"keccak256": "0x0b70296908fa02ade4856babbb4773d80ece9d8d8a3d46031155150d788eb5ec",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://36ac7b9a0a87c9ed15efa824c0b2820f0b69851d0ccac0988b9d7bf3d3b55843",
+				"dweb:/ipfs/QmPzgnwqhBsa4q5oGL9ChX82fdXvNVbEtiCKnxziRFk3H1"
+			]
+		},
+		"contracts/Policy Governance/DTobligations.sol": {
+			"keccak256": "0xc3c424058c4fb531f2238542f67f0be826c564a721022af4208b11560db3af5c",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://7605aee1a91fe5202c210950559d4ce19baaac30d32bb701b042b540bbe11786",
+				"dweb:/ipfs/QmbfLNPjxTkh7Hc1v7mHG2rA3nCPDEjFJHtEcvE94fpsGH"
+			]
+		},
+		"contracts/Resource indexing/DTindexing.sol": {
+			"keccak256": "0xde46ce00a9d16dca7390dc8eb9f339b445eea65a6f005effac3ea779bbbad5a4",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://b536da3aa15ebb5b26a87a78d04f412fafff523b12608e3f20bb810439e121ae",
+				"dweb:/ipfs/QmTrFdBroJvEy4M3X3esQVaxu7KZNutrtSmC58o7Dae7pS"
+			]
+		}
+	},
+	"version": 1
+}
